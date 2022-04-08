@@ -5,7 +5,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
-//data class user act as an entity, extend to parcelable
+//data class user bekerja sebagai entity, extend ke parcelable
 @Entity
 @Parcelize
 data class User(

@@ -22,12 +22,12 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //action for registering new account
+        //action register akun baru
         login_belum_punya_akun.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
-        //action for login authorization
+        //action untuk login authorization
         login_button_login.setOnClickListener {
             if(loginAuth()){
                 Navigation.findNavController(view).navigate(R.id.action_loginFragment_to_homeFragment)
@@ -35,23 +35,23 @@ class LoginFragment : Fragment() {
         }
     }
 
-    //Authorization function for login action
+    // function authorization untuk login action
     private fun loginAuth() : Boolean {
         if(login_input_email.text.isNotEmpty() && login_input_password.text.isNotEmpty()){
 
             dbUser = UserDatabase.getInstance(requireContext())
 
-            //get input data user by user
+            //get input data user oleh user
             val inputanEmail = login_input_email.text.toString()
             val inputanPassword = login_input_password.text.toString()
 
-            //get user if available by checking his email and password
+            //get user jika tersedia dengan mengecek email dan passwordnya
             val user = dbUser?.userDaoInterface()?.checkUserLoginData(inputanEmail, inputanPassword)
             return if(user.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "email/password salah", Toast.LENGTH_SHORT).show()
                 false
             }else{
-                //add username of user in a shared preference after checking user availability
+                //add username dari user pada shared preference setelah cek user availability
                 val sharedPreference = requireContext().getSharedPreferences("DATAUSER", Context.MODE_PRIVATE)
                 val sf = sharedPreference.edit()
                 sf.putString("USERNAME", user)

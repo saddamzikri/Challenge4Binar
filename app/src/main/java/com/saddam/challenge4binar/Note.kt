@@ -6,7 +6,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.android.parcel.Parcelize
 
-//Catatan data class, act as entity. Extend to parcelable
+//Note data class, sebagai entity. Extend ke parcelable
 @Entity
 @Parcelize
 data class Note(

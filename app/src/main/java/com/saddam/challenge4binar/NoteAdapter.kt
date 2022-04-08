@@ -17,7 +17,7 @@ import kotlinx.coroutines.async
 @DelicateCoroutinesApi
 class NoteAdapter(private val listNote : List<Note>) : RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
     private var dbNote : NoteDatabase? = null
-    //Define ViewHolder Class
+    //Mendefinisikan ViewHolder Class
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -34,20 +34,20 @@ class NoteAdapter(private val listNote : List<Note>) : RecyclerView.Adapter<Note
         holder.itemView.button_delete.setOnClickListener {
             dbNote = NoteDatabase.getInstance(it.context)
 
-            //create custom dialog for delete process
+            //buat custom dialog untuk proses delete
             val customDialogDelete = LayoutInflater.from(it.context)
                 .inflate(R.layout.dialog_delete_data, null, false)
-            val hapusDataDialog = AlertDialog.Builder(it.context)
+            val deleteDataDialog = AlertDialog.Builder(it.context)
                 .setView(customDialogDelete)
                 .create()
 
             //cancel delete action
-            customDialogDelete.hapus_dialog_button_cancel.setOnClickListener {
-                hapusDataDialog.dismiss()
+            customDialogDelete.delete_dialog_button_cancel.setOnClickListener {
+                deleteDataDialog.dismiss()
             }
 
             //delete action button
-            customDialogDelete.hapus_dialog_button_hapus.setOnClickListener {
+            customDialogDelete.delete_dialog_button_delete.setOnClickListener {
                 GlobalScope.async {
 
                     //command for room database
@@ -65,7 +65,7 @@ class NoteAdapter(private val listNote : List<Note>) : RecyclerView.Adapter<Note
                     }
                 }
             }
-            hapusDataDialog.show()
+            deleteDataDialog.show()
         }
 
         //edit data

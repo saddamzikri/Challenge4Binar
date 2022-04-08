@@ -8,16 +8,19 @@
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/drawable/ic_delete.xml" value="0.1035" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/drawable/ic_edit.xml" value="0.1035" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1035" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/drawable/ic_person.xml" value="0.101" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/drawable/ic_splash_screen.xml" value="0.1035" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/drawable/ripple_effect.xml" value="0.1035" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/dialog_delete_data.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/dialog_edit_data.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/fragment_input_dialog.xml" value="0.2" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/fragment_login.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/fragment_login.xml" value="0.3207171314741036" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/fragment_register.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/fragment_splash.xml" value="0.2" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/layout/item_adapter_note.xml" value="0.2" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/Challenge4Binar/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.101" />
       </map>
     </option>
   </component>

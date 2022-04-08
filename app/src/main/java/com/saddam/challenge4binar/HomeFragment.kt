@@ -29,27 +29,27 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //set text of username in home using data from saved shared preference
+        //set text username di home memakai data dari shared preference yang tersimpan
         val sharedPreferences = requireContext().getSharedPreferences("DATAUSER", Context.MODE_PRIVATE)
         val username = sharedPreferences.getString("USERNAME", "")
         home_username_text.text = "Halo, $username"
 
-        //action button for tambah data
+        //action button untuk tambah data
         fab_tambah.setOnClickListener {
             InputDialogFragment().show(childFragmentManager, "InputDialogFragment")
         }
 
-        //setting view of recycler view in home fragment
+        //setting view pada recycler view di home fragment
         dbNote = NoteDatabase.getInstance(requireContext())
         getDataNote()
 
-        //action for logout
+        //action untuk logout
         logout.setOnClickListener {
             logout()
         }
     }
 
-    //function to get data of catatanDatabase
+    //function untuk mengambil data dari noteDatabase
     private fun getDataNote() {
         //define layout manager
         rv_note.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
@@ -71,7 +71,7 @@ class HomeFragment : Fragment() {
     private fun logout(){
         AlertDialog.Builder(requireContext())
             .setTitle("LOGOUT")
-            .setMessage("Yakin ingin logout?")
+            .setMessage("Apakah anda yakin ingin logout?")
             .setNegativeButton("Tidak"){ dialogInterface: DialogInterface, i: Int ->
                 dialogInterface.dismiss()
             }.setPositiveButton("Ya"){ dialogInterface: DialogInterface, i: Int ->

@@ -15,14 +15,14 @@ class SplashFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate layout untuk fragment ini
         return inflater.inflate(R.layout.fragment_splash, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Handler(Looper.getMainLooper()).postDelayed({
-            //check if data user is available (was login)
+            //check jika data user tersedia (sudah login)
             val getShared = requireContext().getSharedPreferences("DATAUSER", Context.MODE_PRIVATE)
             if(getShared.contains("USERNAME")){
                 Navigation.findNavController(view).navigate(R.id.action_splashFragment_to_homeFragment)

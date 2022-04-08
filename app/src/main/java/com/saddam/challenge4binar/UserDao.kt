@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 
-//DAO interface for User ROOM database
+//DAO interface untuk user ROOM database
 @Dao
 interface UserDao {
     @Insert fun insertUser(user: User) : Long

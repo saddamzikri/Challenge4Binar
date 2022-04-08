@@ -25,17 +25,18 @@
         android:layout_marginBottom="10dp"
         android:textSize="24sp"
         android:id="@+id/tambah_input_judul"/>
+
     <EditText
+        android:id="@+id/tambah_input_catatan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Masukkan catatan"
-        android:layout_marginHorizontal="15dp"
-        android:padding="3dp"
-        android:background="@drawable/edit_text"
+        android:layout_height="400dp"
         android:layout_below="@id/tambah_input_judul"
+        android:layout_marginHorizontal="15dp"
         android:layout_marginBottom="20dp"
-        android:textSize="24sp"
-        android:id="@+id/tambah_input_catatan"/>
+        android:background="@drawable/edit_text"
+        android:hint="Masukkan catatan"
+        android:padding="3dp"
+        android:textSize="24sp" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

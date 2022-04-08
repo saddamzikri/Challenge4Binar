@@ -4,28 +4,28 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/hapus_data_text"
+        android:id="@+id/delete_data_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginVertical="20dp"
-        android:text="@string/hapus_data"
+        android:text="@string/delete_data"
         android:textSize="28sp" />
 
     <Button
-        android:id="@+id/hapus_dialog_button_hapus"
+        android:id="@+id/delete_dialog_button_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hapus_data_text"
+        android:layout_below="@+id/delete_data_text"
         android:layout_alignParentStart="true"
         android:layout_marginStart="50dp"
         android:text="@string/hapus" />
 
     <Button
-        android:id="@+id/hapus_dialog_button_cancel"
+        android:id="@+id/delete_dialog_button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/hapus_data_text"
+        android:layout_below="@+id/delete_data_text"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="50dp"
         android:text="@string/cancel" />

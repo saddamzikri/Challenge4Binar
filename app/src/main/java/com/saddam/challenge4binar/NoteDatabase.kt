@@ -8,10 +8,10 @@ import androidx.room.RoomDatabase
 //ROOM DATABASE for Catatan
 @Database(entities = [Note::class], version = 1)
 abstract class NoteDatabase : RoomDatabase() {
-    //function to call DAO interface, DAO interface must have been defined
+    //function untuk memanggil DAO interface, DAO interface harus sudah di defined
     abstract fun noteDao() : NoteDao
 
-    //function to get and destroy instance of catatan database
+    //function untuk get dan destroy instance dari note database
     companion object{
         private var INSTANCE : NoteDatabase? = null
         fun getInstance(context : Context):NoteDatabase? {

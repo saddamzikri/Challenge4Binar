@@ -2,7 +2,7 @@
     <string name="app_name">Challenge 4 Binar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="hapus_data">HAPUS DATA</string>
+    <string name="delete_data">HAPUS DATA</string>
     <string name="hapus">HAPUS</string>
     <string name="cancel">CANCEL</string>
     <string name="halo_username">Halo, username</string>

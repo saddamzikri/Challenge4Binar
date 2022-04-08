@@ -19,7 +19,7 @@ class RegisterFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // Inflate layout untuk fragment ini
         return inflater.inflate(R.layout.fragment_register, container, false)
     }
 
@@ -27,7 +27,7 @@ class RegisterFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         //action for button register
         register_button_daftar.setOnClickListener {
-            //checking all field, all field required
+            //checking semua field, semua field required
             if(register_input_username.text.isNotEmpty() &&
                 register_input_email.text.isNotEmpty() &&
                 register_input_password.text.isNotEmpty() &&
@@ -37,17 +37,17 @@ class RegisterFragment : Fragment() {
                 if(register_input_password.text.toString() != register_input_konfirmasi_password.text.toString()){
                     Toast.makeText(requireContext(), "Password dan konfirmasi password harus sama", Toast.LENGTH_SHORT).show()
                 }else{
-                    //if similar, then input user data to user database
+                    //jika sama, maka input data user ke userdatabase
                     inputUserData()
                     Navigation.findNavController(view).navigate(R.id.action_registerFragment_to_loginFragment)
                 }
             }else{
-                Toast.makeText(requireContext(), "Semua data belum terisi", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Ada data yang belum terisi", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    //function for input data in user database
+    //function untuk input data ke user database
     private fun inputUserData(){
         dbUser = UserDatabase.getInstance(requireContext())
         GlobalScope.async {
@@ -60,7 +60,7 @@ class RegisterFragment : Fragment() {
             //command for the room database to insert new user
             val command = dbUser?.userDaoInterface()?.insertUser(User(null, dataUsername, dataEmail, dataPassword, dataKonfirmasiPassword))
 
-            //cehck if command worked or not
+            //cek jika command bekerja atau tidak
             activity?.runOnUiThread{
                 if(command != 0.toLong()){
                     Toast.makeText(requireContext(), "Proses register berhasil", Toast.LENGTH_SHORT).show()

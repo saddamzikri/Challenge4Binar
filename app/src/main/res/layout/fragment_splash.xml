@@ -7,27 +7,29 @@
 
     <ImageView
         android:id="@+id/splash_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:src="@drawable/ic_splash_screen" />
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/ic_note" />
 
     <TextView
         android:id="@+id/text_app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/splash_logo"
         android:layout_centerHorizontal="true"
         android:text="COLLEGE NOTE APPS"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <ProgressBar
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_below="@id/text_app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="20dp" />
 
 </RelativeLayout>
