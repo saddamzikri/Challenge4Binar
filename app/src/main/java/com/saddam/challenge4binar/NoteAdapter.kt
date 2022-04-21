@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.dialog_edit_data.view.*
 import kotlinx.android.synthetic.main.dialog_delete_data.view.*
 import kotlinx.android.synthetic.main.item_adapter_note.view.*
+import com.saddam.challenge4binar.NoteRepository
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async

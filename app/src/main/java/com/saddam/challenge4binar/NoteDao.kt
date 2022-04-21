@@ -1,6 +1,7 @@
 package com.saddam.challenge4binar
 
 import androidx.room.*
+import com.saddam.challenge4binar.Note
 //DAO interface
 @Dao
 interface NoteDao{
